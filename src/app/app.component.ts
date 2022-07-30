@@ -11,56 +11,62 @@ export class AppComponent {
   model = {};
   fields: FormlyFieldConfig[] = [
     {
-      key: 'input',
-      type: 'input',
+      key: 'label',
+      type: 'formly-label',
       templateOptions: {
-        label: 'Input',
-        placeholder: 'Input placeholder',
-        required: true,
+        label: 'Label 1'
       }
     },
     {
-      key: 'textarea',
-      type: 'textarea',
+      key: 'paragraph',
+      type: 'formly-paragraph',
       templateOptions: {
-        label: 'Textarea',
-        placeholder: 'Textarea placeholder',
-        required: true,
+        label: 'Custom Template paragraph'
       }
     },
-    {
-      key: 'checkbox',
-      type: 'checkbox',
-      templateOptions: {
-        label: 'Checkbox',
-      }
-    },
-    {
-      key: 'select',
-      type: 'select',
-      templateOptions: {
-        label: 'Select',
-        placeholder: 'Select placeholder',
-        required: true,
-        options: [
-          { label: 'Option 1', value: '1' },
-          { label: 'Option 2', value: '2' },
-          { label: 'Option 3', value: '3' },
-        ]
-      }
-    },
-    {
-      key: 'radio',
-      type: 'radio',
-      templateOptions: {
-        label: 'Radio',
-        required: true,
-        options: [
-          { label: 'Option 1', value: '1' },
-          { label: 'Option 2', value: '2' },
-        ]
-      }
-    }
+
+    // {
+    //   key: 'textarea',
+    //   type: 'textarea',
+    //   templateOptions: {
+    //     label: 'Textarea',
+    //     placeholder: 'Textarea placeholder',
+    //     required: true,
+    //   }
+    // },
+    // {
+    //   key: 'checkbox',
+    //   type: 'checkbox',
+    //   templateOptions: {
+    //     label: 'Checkbox',
+    //   }
+    // },
+    // {
+    //   key: 'select',
+    //   type: 'select',
+    //   templateOptions: {
+    //     label: 'Select',
+    //     placeholder: 'Select placeholder',
+    //     required: true,
+    //     options: [
+    //       { label: 'Option 1', value: '1' },
+    //       { label: 'Option 2', value: '2' },
+    //       { label: 'Option 3', value: '3' },
+    //     ]
+    //   }
+    // },
+    // {
+    //   key: 'radio',
+    //   type: 'radio',
+    //   templateOptions: {
+    //     label: 'Radio',
+    //     required: true,
+    //     options: [
+    //       { label: 'Option 1', value: '1' },
+    //       { label: 'Option 2', value: '2' },
+    //     ]
+    //   }
+    // }
   ];
 
   onSubmit() {
