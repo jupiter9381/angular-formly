@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { LabelTypeComponent } from './components/label.type';
 import { MatInputModule } from '@angular/material/input';
 import { ParagraphTypeComponent } from './components/paragraph.type';
+import { HeadingTypeComponent } from './components/heading.type';
+import { TimeTypeComponent } from './components/time.type.';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -17,7 +20,8 @@ const appearance: MatFormFieldDefaultOptions = {
 @NgModule({
   declarations: [
     AppComponent,
-    LabelTypeComponent
+    LabelTypeComponent,
+    TimeTypeComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -33,6 +37,14 @@ const appearance: MatFormFieldDefaultOptions = {
         {
           name: 'formly-paragraph',
           component: ParagraphTypeComponent
+        },
+        {
+          name: 'formly-heading',
+          component: HeadingTypeComponent
+        },
+        {
+          name: 'formly-time',
+          component: TimeTypeComponent
         }
       ],
       validationMessages: [
@@ -40,7 +52,8 @@ const appearance: MatFormFieldDefaultOptions = {
       ],
     }),
     FormlyMaterialModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [
     {

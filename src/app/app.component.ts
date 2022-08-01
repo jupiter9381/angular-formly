@@ -14,7 +14,10 @@ export class AppComponent {
       key: 'label',
       type: 'formly-label',
       templateOptions: {
-        label: 'Label 1'
+        label: 'Label 1',
+        attributes: {
+          style: "color: green;"
+        }
       }
     },
     {
@@ -24,6 +27,16 @@ export class AppComponent {
         label: 'Custom Template paragraph'
       }
     },
+    {
+      key: 'time',
+      type: 'formly-time',
+      templateOptions: {
+        attributes: {
+          defaultTime: '23:11'
+        }
+      }
+
+    }
 
     // {
     //   key: 'textarea',
