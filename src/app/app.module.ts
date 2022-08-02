@@ -13,6 +13,10 @@ import { ParagraphTypeComponent } from './components/paragraph.type';
 import { HeadingTypeComponent } from './components/heading.type';
 import { TimeTypeComponent } from './components/time.type.';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { ChecklistTypeComponent } from './components/checklist.type';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatListModule } from '@angular/material/list';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -21,7 +25,8 @@ const appearance: MatFormFieldDefaultOptions = {
   declarations: [
     AppComponent,
     LabelTypeComponent,
-    TimeTypeComponent
+    TimeTypeComponent,
+    ChecklistTypeComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -30,6 +35,10 @@ const appearance: MatFormFieldDefaultOptions = {
     ReactiveFormsModule,
     FormlyModule.forRoot({
       types: [
+        {
+          name: 'formly-checklist',
+          component: ChecklistTypeComponent,
+        },
         {
           name: 'formly-label',
           component: LabelTypeComponent,
@@ -53,6 +62,9 @@ const appearance: MatFormFieldDefaultOptions = {
     }),
     FormlyMaterialModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatListModule,
     NgxMaterialTimepickerModule
   ],
   providers: [

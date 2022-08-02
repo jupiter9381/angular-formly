@@ -11,12 +11,26 @@ export class AppComponent {
   model = {};
   fields: FormlyFieldConfig[] = [
     {
+      key: 'checklist',
+      type: 'formly-checklist',
+      templateOptions: {
+        label: 'Checklist title',
+        datasets: [
+          {label: 'check1', value: 'check1'},
+          {label: 'check2', value: 'check2'},
+          {label: 'check3', value: 'check3'},
+        ]
+      }
+    },
+    {
       key: 'label',
       type: 'formly-label',
       templateOptions: {
         label: 'Label 1',
-        attributes: {
-          style: "color: green;"
+        StyleObject: {
+          color: 'green',
+          fontSize: '18px',
+          backgroundColor: '#000'
         }
       }
     },

@@ -5,7 +5,7 @@ import { FieldArrayType } from '@ngx-formly/core';
 @Component({
   selector: 'formly-field-label',
   template: `
-    <mat-label [style]="field.templateOptions?.attributes?.style">{{field.templateOptions?.label}}</mat-label>
+    <mat-label [ngStyle]="field.templateOptions?.StyleObject">{{field.templateOptions?.label}}</mat-label>
   `,
 })
 export class LabelTypeComponent extends FieldArrayType implements OnInit {
