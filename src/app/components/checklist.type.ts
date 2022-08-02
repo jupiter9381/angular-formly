@@ -32,7 +32,11 @@ import { FieldArrayType } from '@ngx-formly/core';
   `,
   styles: [
     `h4 {margin-bottom: 0px;}`,
-    `.mat-list-text {flex-direction: row !important;}`],
+    `.mat-list-text {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        margin-right: 20px;
+      }`],
   encapsulation: ViewEncapsulation.None,
 })
 export class ChecklistTypeComponent extends FieldArrayType implements OnInit {
