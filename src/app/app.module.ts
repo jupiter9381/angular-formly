@@ -17,7 +17,10 @@ import { ChecklistTypeComponent } from './components/checklist.type';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
-
+import { SignatureTypeComponent } from './components/signature.type';
+//import { SignaturePadModule } from "angular2-signature-pad";
+import { SignaturePadModule } from 'angular2-signaturepad';
+import { MCQTypeComponent } from './components/mcq.type';
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
 };
@@ -26,7 +29,9 @@ const appearance: MatFormFieldDefaultOptions = {
     AppComponent,
     LabelTypeComponent,
     TimeTypeComponent,
-    ChecklistTypeComponent
+    ChecklistTypeComponent,
+    SignatureTypeComponent,
+    MCQTypeComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -54,6 +59,14 @@ const appearance: MatFormFieldDefaultOptions = {
         {
           name: 'formly-time',
           component: TimeTypeComponent
+        },
+        {
+          name: 'formly-field-signature',
+          component: SignatureTypeComponent
+        },
+        {
+          name: 'formly-mcq',
+          component: MCQTypeComponent
         }
       ],
       validationMessages: [
@@ -65,7 +78,8 @@ const appearance: MatFormFieldDefaultOptions = {
     MatTableModule,
     MatCheckboxModule,
     MatListModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule,
+    SignaturePadModule
   ],
   providers: [
     {

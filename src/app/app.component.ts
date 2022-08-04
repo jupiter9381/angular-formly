@@ -16,10 +16,18 @@ export class AppComponent {
       templateOptions: {
         label: 'Checklist title',
         datasets: [
-          {label: 'check1', value: 'check1'},
-          {label: 'check2', value: 'check2'},
-          {label: 'check3', value: 'check3'},
-        ]
+          {label: 'check1', value: 'check1', date: '2022'},
+          {label: 'check2', value: 'check2', date: '2021'},
+          {label: 'check3', value: 'check3', date: '2020'},
+        ],
+        showDate: true
+      }
+    },
+    {
+      key: 'signature',
+      type: 'formly-field-signature',
+      templateOptions: {
+        title: 'Signauture',
       }
     },
     {
@@ -49,9 +57,16 @@ export class AppComponent {
           defaultTime: '23:11'
         }
       }
-
+    },
+    {
+      key: 'mcq',
+      type: 'formly-mcq',
+      templateOptions: {
+        data: ['Question1', 'Question2', 'Question3', 'Question4'],
+        title: "MCQ Title",
+        orientation: 'landscape'
+      }
     }
-
     // {
     //   key: 'textarea',
     //   type: 'textarea',
