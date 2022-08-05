@@ -21,6 +21,7 @@ import { SignatureTypeComponent } from './components/signature.type';
 //import { SignaturePadModule } from "angular2-signature-pad";
 import { SignaturePadModule } from 'angular2-signaturepad';
 import { MCQTypeComponent } from './components/mcq.type';
+import { TableTypeComponent } from './components/table.type';
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
 };
@@ -31,7 +32,8 @@ const appearance: MatFormFieldDefaultOptions = {
     TimeTypeComponent,
     ChecklistTypeComponent,
     SignatureTypeComponent,
-    MCQTypeComponent
+    MCQTypeComponent,
+    TableTypeComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -67,6 +69,10 @@ const appearance: MatFormFieldDefaultOptions = {
         {
           name: 'formly-mcq',
           component: MCQTypeComponent
+        },
+        {
+          name: 'formly-table',
+          component: TableTypeComponent
         }
       ],
       validationMessages: [
