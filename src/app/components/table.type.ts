@@ -5,15 +5,18 @@ import { FieldArrayType } from '@ngx-formly/core';
 @Component({
   selector: 'formly-table',
   template: `
-  <h4>{{field.templateOptions?.title}}</h4>
-  <table mat-table [dataSource]="dataSource" [ngClass]="{'alternative': field.templateOptions?.alternative}">
-    <ng-container matColumnDef="{{header}}" *ngFor="let header of displayedColumns;">
-      <th mat-header-cell *matHeaderCellDef> {{header}} </th>
-      <td mat-cell *matCellDef="let element"> {{element[header]}} </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+  <div [ngStyle]="field.templateOptions?.StyleObject">
+    <h4>{{field.templateOptions?.title}}</h4>
+    <table mat-table [dataSource]="dataSource" [ngClass]="{'alternative': field.templateOptions?.alternative}">
+      <ng-container matColumnDef="{{header}}" *ngFor="let header of displayedColumns;">
+        <th mat-header-cell *matHeaderCellDef> {{header}} </th>
+        <td mat-cell *matCellDef="let element"> {{element[header]}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
   `,
   styles: [
     `table {width: 100%;}`,

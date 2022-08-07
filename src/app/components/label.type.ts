@@ -3,7 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { FieldArrayType } from '@ngx-formly/core';
 
 @Component({
-  selector: 'formly-field-label',
+  selector: 'formly-label',
   template: `
     <mat-label [ngStyle]="field.templateOptions?.StyleObject">{{field.templateOptions?.label}}</mat-label>
   `,

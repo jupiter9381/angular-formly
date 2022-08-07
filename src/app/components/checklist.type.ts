@@ -4,14 +4,17 @@ import { FieldArrayType } from '@ngx-formly/core';
 @Component({
   selector: 'formly-field-checklist',
   template: `
-    <h4>{{field.templateOptions?.label}}</h4>
-    <mat-selection-list>
-      <mat-list-option *ngFor="let element of datasource; let i = index" [value]="element">
-        <span> {{ i + 1}} </span>
-        <span> {{element.label}} </span>
-        <span *ngIf="field.templateOptions?.showDate"> {{element.date}} </span>
-      </mat-list-option>
-    </mat-selection-list>
+    <div [ngStyle]="field.templateOptions?.StyleObject">
+      <h4>{{field.templateOptions?.title}}</h4>
+      <mat-selection-list>
+        <mat-list-option *ngFor="let element of datasource; let i = index" [value]="element">
+          <span> {{ i + 1}} </span>
+          <span> {{element.label}} </span>
+          <span *ngIf="field.templateOptions?.showDate"> {{element.date}} </span>
+        </mat-list-option>
+      </mat-selection-list>
+    </div>
+    
   `,
   styles: [
     `h4 {margin-bottom: 0px;}`,

@@ -29,11 +29,13 @@ const appearance: MatFormFieldDefaultOptions = {
   declarations: [
     AppComponent,
     LabelTypeComponent,
+    ParagraphTypeComponent,
     TimeTypeComponent,
     ChecklistTypeComponent,
     SignatureTypeComponent,
     MCQTypeComponent,
-    TableTypeComponent
+    TableTypeComponent,
+    HeadingTypeComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -63,7 +65,7 @@ const appearance: MatFormFieldDefaultOptions = {
           component: TimeTypeComponent
         },
         {
-          name: 'formly-field-signature',
+          name: 'formly-signature',
           component: SignatureTypeComponent
         },
         {

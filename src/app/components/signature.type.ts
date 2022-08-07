@@ -5,18 +5,20 @@ import { SignaturePad } from 'angular2-signaturepad';
 @Component({
   selector: 'formly-field-signature',
   template: `
-    <h4>{{ field.templateOptions?.title }}</h4>
-    <div class="signature-container">
-      <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
-    </div>
+    <div [ngStyle]="field.templateOptions?.StyleObject">
+      <h4>{{ field.templateOptions?.title }}</h4>
+      <div class="signature-container">
+        <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+      </div>
 
-    <div class="buttons">
-      <button (click)="clearSignature()">Clear signature pad</button>
-      <button (click)="savePad()">Save signature</button>
-    </div>
+      <div class="buttons">
+        <button (click)="clearSignature()">Clear</button>
+        <button (click)="savePad()">Save</button>
+      </div>
 
-    <div class="signature-image" *ngIf="signatureImg">
-      <img src='{{ signatureImg }}' />
+      <div class="signature-image" *ngIf="signatureImg">
+        <img src='{{ signatureImg }}' />
+      </div>
     </div>
   `,
   styles: [
@@ -25,6 +27,7 @@ import { SignaturePad } from 'angular2-signaturepad';
       border-width: 1px;
       margin-bottom: 20px;
       background-color: coral;
+      width: fit-content;
     }`,
   ]
 })
@@ -34,7 +37,7 @@ export class SignatureTypeComponent extends FieldArrayType implements OnInit {
 
   signaturePadOptions: Object = {
     'minWidth': 2,
-    'canvasWidth': 700,
+    'canvasWidth': 600,
     'canvasHeight': 300
   };
 

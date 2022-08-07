@@ -4,7 +4,7 @@ import { FieldArrayType } from '@ngx-formly/core';
 @Component({
   selector: 'formly-field-time',
   template: `
-    <div class="ngx-timepicker-field-example">
+    <div [ngStyle]="field.templateOptions?.StyleObject">
         <ngx-timepicker-field [format]="24" [defaultTime]="'23:11'"></ngx-timepicker-field>
     </div>
 `,

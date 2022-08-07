@@ -14,7 +14,7 @@ export class AppComponent {
       key: 'checklist',
       type: 'formly-checklist',
       templateOptions: {
-        label: 'Checklist title',
+        title: 'Checklist title',
         datasets: [
           {label: 'check1', value: 'check1', date: '2022'},
           {label: 'check2', value: 'check2', date: '2021'},
@@ -25,9 +25,14 @@ export class AppComponent {
     },
     {
       key: 'signature',
-      type: 'formly-field-signature',
+      type: 'formly-signature',
       templateOptions: {
         title: 'Signauture',
+        // StyleObject: {
+        //   color: 'green',
+        //   fontSize: '18px',
+        //   backgroundColor: '#000'
+        // }
       }
     },
     {
@@ -43,10 +48,27 @@ export class AppComponent {
       }
     },
     {
+      key: 'heading',
+      type: 'formly-heading',
+      templateOptions: {
+        title: 'heading',
+        type: 'h2',
+        StyleObject: {
+          color: 'black',
+          fontSize: '18px',
+          backgroundColor: 'green'
+        }
+      }
+    },
+    {
       key: 'paragraph',
       type: 'formly-paragraph',
       templateOptions: {
-        label: 'Custom Template paragraph'
+        title: 'Custom Template paragraph',
+        StyleObject: {
+          color: 'black',
+          fontSize: '20px'
+        }
       }
     },
     {
@@ -64,7 +86,11 @@ export class AppComponent {
       templateOptions: {
         data: ['Question1', 'Question2', 'Question3', 'Question4'],
         title: "MCQ Title",
-        orientation: 'landscape'
+        orientation: 'landscape', // otherwise portrait
+        StyleObject: {
+          background: '#ffff00',
+          fontSize: '20px'
+        }
       }
     },
     {
@@ -79,7 +105,10 @@ export class AppComponent {
           {'Col1': 'Data51', 'Col2': 'Data52', 'Col3': 'Data53', 'Col4': 'Data54', 'Col5': 'Data55'}
         ],
         title: "Datatable Title",
-        alternative: true
+        alternative: true,
+        StyleObject: {
+          fontSize: '18px'
+        }
       }
     }
     // {
